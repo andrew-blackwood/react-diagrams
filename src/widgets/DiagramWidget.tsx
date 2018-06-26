@@ -496,9 +496,9 @@ export class DiagramWidget extends BaseWidget<DiagramProps, DiagramState> {
 							var relative = diagramEngine.getRelativeMousePoint(event);
 							var sourcePort = model.model;
 							var link = sourcePort.createLinkModel();
-							link.setSourcePort(sourcePort);
 
 							if (link) {
+								link.setSourcePort(sourcePort);
 								link.removeMiddlePoints();
 								if (link.getSourcePort() !== sourcePort) {
 									link.setSourcePort(sourcePort);
